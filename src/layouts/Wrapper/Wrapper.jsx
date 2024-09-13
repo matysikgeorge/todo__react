@@ -4,7 +4,7 @@ import { Button } from "../../ui/Button/Button";
 import { List } from "../../components/List/List";
 import s from "./Wrapper.module.scss";
 
-export const Wrapper = ({getTask, changeInputHandler}) => {
+export const Wrapper = ({getTask, changeInputHandler, addTask, check, deleteItem }) => {
   return (
     <>
       <div className={s.wrapper}>
@@ -12,7 +12,7 @@ export const Wrapper = ({getTask, changeInputHandler}) => {
           <Input changeInputHandler={changeInputHandler}/>
           <Button>Добавить</Button>
         </Form>
-        <List/>
+        <List deleteItem={deleteItem} check={check} addTask={addTask} getTask={getTask}/>
       </div>
     </>
   );

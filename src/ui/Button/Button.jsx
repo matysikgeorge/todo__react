@@ -1,9 +1,10 @@
 import s from "./Button.module.scss";
 
-export const Button = ({children, colorBtn}) => {
+export const Button = ({children, colorBtn, onClick}) => {
+ 
   return (
     <>
-      <button className={`${s.button} ${s[colorBtn]}`} >{children}</button>
+      <button className={`${s.button} ${s[colorBtn]}`} onClick={onClick} >{children}</button>
     </>
   );
 };
