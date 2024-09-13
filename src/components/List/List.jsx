@@ -8,7 +8,7 @@ export const List = ({addTask, check, deleteItem}) => {
     <>
       <ul className={s.list}>
       {addTask.map((todo)=> {
-        return <Item  deleteItem={deleteItem} check={check} textItem={todo.task}
+        return <Item  deleteItem={deleteItem} check={check} textItem={todo.task} isDone={todo.isDone}
         id={todo.id}/>
       })}
       

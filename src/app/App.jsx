@@ -35,16 +35,13 @@ function App() {
   }
 
   function check(id) {
-    // console.log("check");
-    // setAddTask(JSON.parse(localStorage.getItem("todo")));
-    // const findChecked = addTask.find((el) => el.id === id);
-    // findChecked.isDone = !findChecked.isDone;
-    // console.log(findChecked);
-    // setAddTask(addTask);
-    // console.log(addTask);
-
-    const findChecked = addTask.map((el) => el);
-    console.log(findChecked);
+    const update = addTask.map((el) => {
+      if (el.id === id) {
+        return { ...el, isDone: !el.isDone };
+      }
+      return el;
+    });
+    setAddTask(update);
   }
 
   function deleteItem() {
