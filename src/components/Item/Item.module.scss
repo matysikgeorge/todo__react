@@ -1,0 +1,27 @@
+.item {
+  display: flex;
+  margin-bottom: 26px;
+
+  &__checkbox {
+    width: 16px;
+    accent-color: #7749f8;
+    &:checked ~ p {
+      color: #54595e;
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  &__button {
+    border: none;
+    background-color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
